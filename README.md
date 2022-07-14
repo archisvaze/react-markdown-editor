@@ -1,4 +1,18 @@
-# Getting Started with Create React App
+# React Markdown Editor
+
+
+![Screenshot 2022-07-14 220054](https://user-images.githubusercontent.com/92965519/179033471-7bb34296-ec3e-45f7-83d6-d1bec93748c9.png)
+
+
+Markdown editor is able to parse
+- Heading 1 (#)
+- Heading 2 (##)
+- Heading 3 (###)
+- List item (-)
+- Horizontal Rule (`---`)
+- Bold text (`**text**`)
+- BlockQuote (`>`)
+- Code Block (```)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
