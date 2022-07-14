@@ -11,8 +11,10 @@ function App(props) {
         let h2RegExp = /^## (.*$)/gim;
         let h3RegExp = /^### (.*$)/gim;
         let listRegExp = /^- (.*$)/gim;
-        let codeBlockRegExp = /\```(.*?)```/gim
+        let codeBlockRegExp = /^```([\s\S]*?)```$/gm
         let blockCode = /^> (.*$)/gim;
+        let boldTextRegExp = /\*\*(\S(.*?\S)?)\*\*/gm;
+        let horizontalRegExp = /---/gmi;
 
 
 
@@ -22,8 +24,10 @@ function App(props) {
             .replaceAll(h2RegExp, '<h2>$1</h2>')
             .replaceAll(h3RegExp, '<h3>$1</h3>')
             .replaceAll(listRegExp, '<li>$1</li>')
-            .replace(codeBlockRegExp, '<pre class="code">$1</pre>')
-            .replace(blockCode, '<pre class="block-code">$1</pre>')
+            .replaceAll(codeBlockRegExp, '<pre class="code">$1</pre>')
+            .replaceAll(blockCode, '<pre class="block-code">$1</pre>')
+            .replaceAll(boldTextRegExp, '<strong>$1</strong>')
+            .replaceAll(horizontalRegExp, '<hr/>')
 
 
 
@@ -52,7 +56,7 @@ function App(props) {
 
 
 
-                <pre className="displayarea"
+                <pre  className="displayarea"
                     dangerouslySetInnerHTML={{ __html: text }}
                 />
 

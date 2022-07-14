@@ -20,6 +20,7 @@ body {
     display: flex;
     max-width: 1440px;
     overflow: hidden;
+    min-width: 350px;
 }
 
 .textarea {
@@ -34,9 +35,6 @@ body {
     font-size: 18px;
     padding: 15px;
     resize: none;
-    /* overflow-y: scroll;
-    overflow-x: scroll;
-    overflow-wrap: normal; */
 }
 
 .displayarea {
@@ -49,9 +47,8 @@ body {
     width: 45vw;
     font-size: 18px;
     padding: 15px;
-    /* overflow-y: scroll;
     overflow-x: scroll;
-    overflow-wrap: normal; */
+    overflow-wrap: break-word;
 }
 
 .titles {
@@ -91,6 +88,7 @@ body {
     margin: 10px;
     background-color: rgb(50, 50, 50);
     color: white;
+    white-space: initial;
 }
 
 .block-code{
@@ -98,6 +96,10 @@ body {
     padding: 10px;
     margin: 10px;
     background-color: rgb(70, 70, 70);
+    color: white;
     border-left: 8px solid orange;
     color: white;
+    white-space: initial;
 }
+
+
